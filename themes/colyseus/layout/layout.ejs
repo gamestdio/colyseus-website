@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link href='http://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet' type='text/css'>
         <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
-        <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="<%- url_for('images/favicon.png')  %>" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "<%- page.type %>"
         </script>
@@ -30,8 +30,8 @@
                 <% } %>
             </div>
             <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
-            <script src="/js/smooth-scroll.min.js"></script>
-            <script src="/js/common.js"></script>
+            <script src="<%- url_for('js/smooth-scroll.min.js') %>"></script>
+            <script src="<%- url_for('js/common.js') %>"></script>
         <% } else { %>
             <%- body %>
         <% } %>
