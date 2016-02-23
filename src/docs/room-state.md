@@ -4,8 +4,9 @@ type: documentation
 order: 4
 ---
 
-Each room has its own state. The state is broadcasted to all connected clients
-if the state changed since last broadcast.
+Each room has its own state. A broadcast occurs every time the state changes,
+notifying all connected clients of all patches occurred in the interval
+specified.
 
 ![Room State Diagram](http://www.gliffy.com/go/publish/image/10069469/L.png)
 
