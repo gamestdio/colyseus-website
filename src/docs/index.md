@@ -6,12 +6,12 @@ order: 1
 
 First thing, make sure you have [node.js](https://nodejs.org/) v4+ installed.
 Colyseus uses some modern JavaScript syntax which are available on version 4+,
-so you might possibly need to upgrade.
+so you might possibly need to upgrade yours.
 
 ## Project structure
 
-The simplest way to start a new project is cloning this [template
-project](https://github.com/endel/colyseus-starter). And install its
+The simplest way to start a new project is cloning this
+[template](https://github.com/endel/colyseus-starter) and install its
 dependencies.
 
 ```
@@ -20,7 +20,7 @@ cd colyseus-starter
 npm install
 ```
 
-Now you're able to run the server, which will be listening on port 3553 by
+To run the server, simply run `npm start`. The server listen on port 3553 by
 default.
 
 ```

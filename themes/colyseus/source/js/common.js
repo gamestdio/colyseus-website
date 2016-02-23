@@ -3,7 +3,7 @@
   initSearch()
   initMobileMenu()
   if (PAGE_TYPE) {
-    initVersionSelect()
+    // initVersionSelect()
     initSubHeaders()
   }
 

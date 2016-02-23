@@ -34,19 +34,22 @@ class ChatRoom extends Room {
     console.log(client.id, "sent", data)
   }
 }
+
+module.exports = ChatRoom
 ```
 
 Considering you have a `colyseus.Server` instance in your `index.js` file ([as
-in the default project structure](https://github.com/endel/colyseus-starter)),
-you'll need to specify an unique identifier for each room you register.
+in the starter project example](https://github.com/endel/colyseus-starter)),
+you'll need to specify a unique identifier for each room handler you register.
 
 ```javascript
 gameServer.register('chat_room', ChatRoom)
 ```
 
-Note that you're able to register the same room class using different
-identifiers. You may use the third parameter to send custom options to the room
-constructor, making the room have a different behaviour.
+Note that you're able to register the same room class multiple tiles, using
+different unique identifiers. The third parameter of `register` is used to for
+custom constructor options, allowing you to make the room have a different
+behaviour, based on these options.
 
 ```javascript
 gameServer.register('chat_room_with_more_players', ChatRoom, {
@@ -54,8 +57,10 @@ gameServer.register('chat_room_with_more_players', ChatRoom, {
 })
 ```
 
-In order to make this `maxClients` option works, we'll need to implement it
-inside `requestJoin` method:
+In this example, we're going to limit the maximum clients allowed on rooms
+called `'chat_room_with_more_players'` to `20`. In order to make this
+`maxClients` option work as expected, we'll need to implement the `requestJoin`
+method:
 
 ```javascript
 class ChatRoom extends Room {

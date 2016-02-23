@@ -6,6 +6,8 @@ order: 3
 
 Colyseus right now provides the simplest match-making system you'd expect.
 
+![Match-making Diagram](http://www.gliffy.com/go/publish/image/10069321/L.png)
+
 As you've seen in [registering rooms](registering-rooms) section, you can
 register as many room handlers as you want, possibly having custom options when
 initializing them.
@@ -26,3 +28,4 @@ class ChatRoom extends Room {
   }
 }
 ```
+
