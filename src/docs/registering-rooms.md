@@ -6,7 +6,7 @@ order: 2
 
 You may define as many rooms as you want in the server.
 
-When creating a a room class, you'll need to implement its basic API in order to change its state to deal with your game, such as:
+When creating a room class, you'll need to implement its basic API in order to change its state to deal with your game, such as:
 
 - `requestJoin (options)`
 - `onJoin (client, options)`
