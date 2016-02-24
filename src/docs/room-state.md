@@ -49,9 +49,7 @@ The patch state broadcasted by the server follows JSON Patch structure ([RFC 690
 
 ## State Handler Class
 
-The state handler class allows you to have private state variables while
-explicitly exposing public ones. Only what is exposed through `toJSON` method
-will be sent to all connected clients.
+The state handler class allows you to have private state variables while explicitly exposing public ones. Only what is exposed through `toJSON` method will be sent to all connected clients.
 
 Here's the a simple example of a state handler class:
 
@@ -85,11 +83,7 @@ class StateHandler {
 module.exports = StateHandler
 ```
 
-On this example the `StateHandler` create a `MapBuilder` instance, which would
-be responsible for creating the map data. It expose some methods to be called
-from the parent `Room` instance, such as `addPlayer` and `restart`. Note that
-the `MapBuilder` instance is not exposed through `toJSON` method, which means
-it's only for internal usage and shouldn't be public.
+On this example the `StateHandler` create a `MapBuilder` instance, which would be responsible for creating the map data. It expose some methods to be called from the parent `Room` instance, such as `addPlayer` and `restart`. Note that the `MapBuilder` instance is not exposed through `toJSON` method, which means it's only for internal usage and shouldn't be public.
 
 To use this `StateHandler` class in a `Room` instance it would look like this:
 
@@ -118,10 +112,7 @@ class MapRoom extends Room {
 module.exports = MapRoom
 ```
 
-What makes this approach powerful is the ability to have nested instances that
-responds to `toJSON` method. This allows you to create an internal structure
-that mutates itself, calling methods from each other back and forth. Let's use
-`Player` as an example:
+What makes this approach powerful is the ability to have nested instances that responds to `toJSON` method. This allows you to create an internal structure that mutates itself, calling methods from each other back and forth. Let's use `Player` as an example:
 
 ```JavaScript
 class Player {
@@ -153,8 +144,7 @@ class Player {
 module.exports = Player
 ```
 
-Having defined the `Player` class, you'd instantiate it rather than using plain
-objects in the `addPlayer` method:
+Having defined the `Player` class, you'd instantiate it rather than using plain objects in the `addPlayer` method:
 
 ```javascript
 // StateHandler.js
@@ -164,3 +154,7 @@ objects in the `addPlayer` method:
   }
 // ...
 ```
+
+**View more:**
+
+- [TANX state handler](https://github.com/endel/tanx/blob/master/modules/state.js)
