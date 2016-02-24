@@ -4,14 +4,11 @@ type: documentation
 order: 4
 ---
 
-Each room has its own state. A broadcast occurs every time the state changes,
-notifying all connected clients of all patches occurred in the interval
-specified.
+Each room has its own state. A broadcast occurs every time the state changes, notifying all connected clients of all patches occurred in the interval specified.
 
 ![Room State Diagram](http://www.gliffy.com/go/publish/image/10069469/L.png)
 
-There's two ways of dealing with the room state: using plain JavaScript objects,
-or having a state handler class.
+There's two ways of dealing with the room state: using plain JavaScript objects, or having a state handler class.
 
 ## Plain Object State
 
@@ -36,11 +33,9 @@ class ChatRoom extends Room {
 
 ## Appling patch state
 
-At the client-side, on this example, a patch of the room state is sent every 1
-second, if something changed since last patch.
+At the client-side, on this example, a patch of the room state is sent every 1 second, if something changed since last patch.
 
-The patch state broadcasted by the server follows JSON Patch structure ([RFC
-6902](http://tools.ietf.org/html/rfc6902)), which looks like this:
+The patch state broadcasted by the server follows JSON Patch structure ([RFC 6902](http://tools.ietf.org/html/rfc6902)), which looks like this:
 
 ```javascript
 [
