@@ -26,7 +26,7 @@ class ChatRoom extends Room {
   }
 
   onLeave (client) {
-    console.log(client.id, "leaved!")
+    console.log(client.id, "left!")
   }
 
   onMessage (client, data) {
