@@ -12,6 +12,13 @@
         <script>
             window.PAGE_TYPE = "<%- page.type %>"
         </script>
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Colyseus"/>
+        <meta property="og:url" content="<%- url %>"/>
+        <meta property="og:title" content="Colyseus - Open-Source Multiplayer Game Server for Node.js"/>
+        <meta property="og:image" content="<%- config.url + '/images/share.png'  %>"/>
+
         <%- css(isIndex ? 'css/index' : 'css/page') %>
         <%- partial('partials/ga') %>
     </head>
