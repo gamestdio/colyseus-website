@@ -17,7 +17,10 @@ The simplest way to deal with the room state is using a plain JavaScript object.
 ```javascript
 class ChatRoom extends Room {
   constructor(options) {
-    super(options, 1000) // sync state every 1 second
+    super(options)
+
+    // sync state every 1 second
+    this.setPatchRate( 1000 )
 
     // use a plain object state, holding the room "messages".
     this.setState({
@@ -94,7 +97,10 @@ var StateHandler = require('./StateHandler')
 class MapRoom extends Room {
 
   constructor (options) {
-    super(options, 1000 / 20) // sync every 50ms
+    super(options)
+
+    // sync state every 50ms
+    this.setPatchRate( 1000 / 20 )
 
     // initialize StateHandler
     this.setState( new StateHandler() )

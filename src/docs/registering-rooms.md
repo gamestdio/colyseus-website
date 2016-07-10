@@ -18,7 +18,7 @@ var Room = require('colyseus').Room
 
 class ChatRoom extends Room {
   constructor(options) {
-    super(options, 1000 / 20)
+    super(options)
   }
 
   onJoin (client, options) {
