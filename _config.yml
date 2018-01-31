@@ -12,8 +12,8 @@ language: en
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://gamestdio.github.io/colyseus
-root: /colyseus/
+url: http://colyseus.io
+root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
@@ -97,5 +97,5 @@ markdown:
 ## Docs: http://zespia.tw/hexo/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:gamestdio/colyseus.git
-  branch: gh-pages
+  repository: git@github.com:colyseus/colyseus.github.io.git
+  branch: master
