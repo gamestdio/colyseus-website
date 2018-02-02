@@ -330,6 +330,8 @@ ul.plans > li > ul > li:first-child {
 ul.plans > li > ul > li {
   border-bottom: 1px solid #9c9c9c;
   padding: 12px;
+  width: 88%;
+  margin: 0 auto;
 }
 
 /* 
