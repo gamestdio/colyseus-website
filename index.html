@@ -111,7 +111,7 @@
               <svg aria-hidden="true" data-prefix="fas" data-icon="cloud" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-cloud fa-w-20"><path fill="currentColor" d="M537.585 226.56C541.725 215.836 544 204.184 544 192c0-53.019-42.981-96-96-96-19.729 0-38.065 5.954-53.316 16.159C367.042 64.248 315.288 32 256 32c-88.366 0-160 71.634-160 160 0 2.728.07 5.439.204 8.133C40.171 219.845 0 273.227 0 336c0 79.529 64.471 144 144 144h368c70.692 0 128-57.308 128-128 0-61.93-43.983-113.586-102.415-125.44z" class=""></path></svg>
               <h3>Deploy it anywhere</h3>
               <p>
-                Colyseus is cloud-agnostic. Easily switch between cloud providers and avoid lock-in or run it on private servers. 
+                Colyseus is cloud-agnostic. Easily switch between cloud providers and avoid lock-in or run it on private servers.
                 <a href="http://colyseus.io/docs/deployment/">More details</a>
               </p>
             </li>
@@ -142,6 +142,7 @@
           <ul>
             <li><a href="https://github.com/gamestdio/colyseus.js" target="_blank" class="html5"></a></li>
             <li><a href="https://github.com/gamestdio/colyseus-unity3d" target="_blank" class="unity"></a></li>
+            <li><a href="https://github.com/gamestdio/colyseus-defold" target="_blank" class="defold"></a></li>
             <!-- <li><a href="https://github.com/gamestdio/colyseus.lua" target="_blank" class="corona"></a></li> -->
           </ul>
           <p class="small">Need a client for a different platform? Share your interest on the <a href="https://discuss.colyseus.io">discussion board</a>!</p>
@@ -229,8 +230,8 @@
       <script>
         !function() {
           var t;
-          if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
-          t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+          if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+          t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
           t.factory = function(e) {
             return function() {
               var n;
@@ -240,8 +241,8 @@
             t[e] = t.factory(e);
           }), t.load = function(t) {
             var e, n, o, i;
-            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
-            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
             n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
           });
         }();

@@ -56,7 +56,7 @@ header {
   background-size: cover;
   padding: 20vh 14vh 6vh 14vh;
   height: 98vh;
-  color: #fff; 
+  color: #fff;
 }
 
 header h2 {
@@ -149,7 +149,7 @@ div.row .column {
 }
 
 section {
-  padding: 10vh 4vw; 
+  padding: 10vh 4vw;
 }
 
 section.contrast, footer.contrast {
@@ -207,6 +207,17 @@ section .platforms ul li a.html5:hover {
   background-position: bottom;
 }
 
+section .platforms ul li a.defold {
+  background: url("../images/sprites/defold.png") no-repeat top;
+  display: inline-block;
+  width: 55px;
+  height: 70px;
+}
+
+section .platforms ul li a.defold:hover {
+  background-position: bottom;
+}
+
 section .platforms ul li a.corona {
   background: url("../images/sprites/corona.png") no-repeat top;
   display: inline-block;
@@ -243,7 +254,7 @@ section .projects > a:hover {
   border-color: #fff;
 }
 
-/* 
+/*
  * Features
  */
 ul.features {
@@ -279,7 +290,7 @@ ul.features > li p {
 }
 
 
-/* 
+/*
  * Plans
  */
 ul.plans {
@@ -334,7 +345,7 @@ ul.plans > li > ul > li {
   margin: 0 auto;
 }
 
-/* 
+/*
  * Showcase
  */
 ul.showcase {
@@ -434,7 +445,7 @@ ul.showcase li a:hover::before {
  */
 @media only screen and (max-width: 1000px) {
   .inner {
-    width: 480px; 
+    width: 480px;
   }
 }
 
@@ -462,7 +473,7 @@ ul.showcase li a:hover::before {
   }
 
   .inner {
-    width: 100%; 
+    width: 100%;
   }
 
   section {
