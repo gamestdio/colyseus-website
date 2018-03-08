@@ -92,8 +92,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #f8f8f8;
-  color: #282828;
+  background-color: #7540f0;
+  /* color: #282828; */
 }
 
 footer {
@@ -166,6 +166,15 @@ section.headline {
   font-size: 1.5em;
   line-height: 1.7em;
   color: #4c4c4c;
+}
+
+section.platforms {
+  /* background: #04ddd4; */
+  color: #fff;
+  background: #7540f0;
+}
+section .platforms h1 {
+  color: inherit;
 }
 
 section .platforms h2 {
