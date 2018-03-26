@@ -17,6 +17,12 @@ body {
   line-height: 1.4em;
 }
 
+/* codesponsor is back! */
+#codefund_ad {
+  margin-top: 10px;
+  height: 80px;
+}
+
 img { border: none; }
 
 h1, h2, h3, h4, strong {
