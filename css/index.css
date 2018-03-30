@@ -200,15 +200,15 @@ section .platforms ul li a {
   margin: 2vh;
 }
 
+section .platforms ul li a:hover {
+  background-position: bottom !important;
+}
+
 section .platforms ul li a.unity {
   background: url("../images/sprites/unity.png") no-repeat top;
   display: inline-block;
   width: 60px;
   height: 62px;
-}
-
-section .platforms ul li a.unity:hover {
-  background-position: bottom;
 }
 
 section .platforms ul li a.html5 {
@@ -218,10 +218,6 @@ section .platforms ul li a.html5 {
   height: 63px;
 }
 
-section .platforms ul li a.html5:hover {
-  background-position: bottom;
-}
-
 section .platforms ul li a.defold {
   background: url("../images/sprites/defold.png") no-repeat top;
   display: inline-block;
@@ -229,8 +225,11 @@ section .platforms ul li a.defold {
   height: 70px;
 }
 
-section .platforms ul li a.defold:hover {
-  background-position: bottom;
+section .platforms ul li a.construct3 {
+  background: url("../images/sprites/construct3.png") no-repeat top;
+  display: inline-block;
+  width: 60px;
+  height: 62px;
 }
 
 section .platforms ul li a.corona {
@@ -238,10 +237,6 @@ section .platforms ul li a.corona {
   display: inline-block;
   width: 61px;
   height: 61px;
-}
-
-section .platforms ul li a.corona:hover {
-  background-position: bottom;
 }
 
 section .projects {
