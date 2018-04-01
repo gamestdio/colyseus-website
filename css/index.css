@@ -19,8 +19,23 @@ body {
 
 /* codesponsor is back! */
 #codefund_ad {
-  margin-top: 10px;
-  height: 80px;
+  margin-top: 18px;
+  text-align: center;
+}
+#cf_ad { margin: 0 auto; }
+#cf_ad .cf-wrapper {
+  margin: 0 auto;
+  max-width: 330px;
+  display: block;
+  padding: 20px 15px 0 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  font-family: system, "Helvetica Neue", Helvetica, Arial;
+}
+#cf_ad .cf-wrapper a { color: #fff; }
+#cf_ad .cf-powered-by img {
+  display: block;
 }
 
 img { border: none; }
@@ -61,7 +76,7 @@ header {
   background-position: center;
   background-size: cover;
   padding: 20vh 14vh 6vh 14vh;
-  height: 98vh;
+  height: 100vh;
   color: #fff;
 }
 
@@ -106,7 +121,7 @@ footer {
   padding: 4vh 4vh 12vh 4vh;
 }
 
-header img { margin: 4vh; }
+header .inner img { margin-bottom: 4vh; }
 
 a {
   text-decoration: underline;
