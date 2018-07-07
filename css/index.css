@@ -121,6 +121,26 @@ footer {
   padding: 4vh 4vh 12vh 4vh;
 }
 
+footer ul {
+  display: inline-block;
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
 header .inner img { margin-bottom: 4vh; }
 
 a {
@@ -244,6 +264,13 @@ section .platforms ul li a.construct3 {
   background: url("../images/sprites/construct3.png") no-repeat top;
   display: inline-block;
   width: 60px;
+  height: 62px;
+}
+
+section .platforms ul li a.gamemaker {
+  background: url("../images/sprites/gamemaker.png") no-repeat top;
+  display: inline-block;
+  width: 94px;
   height: 62px;
 }
 

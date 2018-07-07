@@ -58,7 +58,6 @@
             <ul>
               <li><a href="#features">Features</a></li>
               <li><a href="#showcase">Showcase</a></li>
-              <li><a href="#plans">Plans</a></li>
               <li><a href="http://colyseus.io/docs" target="_blank">Documentation</a></li>
               <li><a href="https://discuss.colyseus.io" target="_blank">Forum</a></li>
               <li><a href="https://github.com/gamestdio/colyseus" target="_blank">GitHub</a></li>
@@ -77,6 +76,22 @@
           <p>
             If you're a solo indie developer, small or large game studio, Colyseus will allow you to deliver realtime or turn-based multiplayer games in record time.
           </p>
+        </div>
+      </section>
+
+      <section id="platforms" class="platforms">
+        <div class="platforms">
+          <h1>Supported platforms</h1>
+          <p>Colyseus comes with official support for these platforms.</p>
+          <ul>
+            <li><a title="HTML5" href="https://github.com/gamestdio/colyseus.js" target="_blank" class="html5"></a></li>
+            <li><a title="Construct 3" href="https://www.construct.net/br/make-games/addons/111/colyseus-multiplayer" target="_blank" class="construct3"></a></li>
+            <li><a title="Defold Engine" href="https://www.defold.com/community/projects/97651/" target="_blank" class="defold"></a></li>
+            <!-- <li><a title="Game Maker: Studio" href="https://github.com/gamestdio/colyseus&#45;gml" target="_blank" class="gamemaker"></a></li> -->
+            <li><a title="Unity 3D" href="https://github.com/gamestdio/colyseus-unity3d" target="_blank" class="unity"></a></li>
+            <!-- <li><a href="https://github.com/gamestdio/colyseus&#45;lua#corona&#45;sdk" target="_blank" class="corona"></a></li> -->
+          </ul>
+          <p class="small">Need a client for a different platform? Share your interest on the <a href="https://discuss.colyseus.io">discussion board</a>!</p>
         </div>
       </section>
 
@@ -137,21 +152,6 @@
         </div>
       </section>
 
-      <section class="platforms">
-        <div class="platforms">
-          <h1>Supported platforms</h1>
-          <p>Colyseus comes with official support for these platforms.</p>
-          <ul>
-            <li><a title="HTML5" href="https://github.com/gamestdio/colyseus.js" target="_blank" class="html5"></a></li>
-            <li><a title="Unity 3D" href="https://github.com/gamestdio/colyseus-unity3d" target="_blank" class="unity"></a></li>
-            <li><a title="Construct 3" href="https://www.construct.net/br/make-games/addons/111/colyseus-multiplayer" target="_blank" class="construct3"></a></li>
-            <li><a title="Defold Engine" href="https://www.defold.com/community/projects/97651/" target="_blank" class="defold"></a></li>
-            <!-- <li><a href="https://github.com/gamestdio/colyseus&#45;lua#corona&#45;sdk" target="_blank" class="corona"></a></li> -->
-          </ul>
-          <p class="small">Need a client for a different platform? Share your interest on the <a href="https://discuss.colyseus.io">discussion board</a>!</p>
-        </div>
-      </section>
-
       <section class="contrast" id="showcase">
         <div class="inner">
           <h1>Showcase</h1>
@@ -191,77 +191,18 @@
         </ul>
       </section>
 
-      <section class="headline" id="plans">
-        <div class="inner">
-          <h2>Plans</h2>
-          <p>Go totally on your own. We're here if you need support, too.</p>
-
-          <ul class="plans">
-            <li>
-              <h3>Open-source</h3>
-              <p>Free</p>
-              <ul>
-                <li>Commercial Use</li>
-                <li>All <a href="#features">features</a> included</li>
-                <li>Support on <a href="https://gitter.im/gamestdio/colyseus">Gitter</a>/<a href="https://discuss.colyseus.io/">Forum</a></li>
-                <li>MIT License</li>
-              </ul>
-              <a href="http://colyseus.io/docs/getting-started/" class="button">Free</a>
-            </li>
-
-            <li>
-              <h3>Paid support</h3>
-              <p>from <strong>$200/month</strong></p>
-              <ul>
-                <li><strong>All open-source features +</strong></li>
-                <li>Consulting</li>
-                <li>Priority support</li>
-                <li>Hot fixes for critical issues</li>
-              </ul>
-              <a href="mailto:endel@gamestd.io" class="button">Contact us</a>
-            </li>
-          </ul>
-
-          <p class="small">Have a question? Feel free to <a href="javascript:drift.api.openChat()">leave us a message</a>.</p>
-        </div>
-      </section>
-
       <footer class="contrast" >
         <div class="inner">
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#showcase">Showcase</a></li>
+            <li><a href="http://colyseus.io/docs" target="_blank">Documentation</a></li>
+            <li><a href="https://discuss.colyseus.io" target="_blank">Forum</a></li>
+            <li><a href="https://github.com/gamestdio/colyseus" target="_blank">GitHub</a></li>
+          </ul>
+
           <p>Copyright © 2018 <a href="https://github.com/endel">Endel Dreyer</a></p>
         </div>
       </footer>
-
-      <!-- Start of Async Drift Code -->
-      <script>
-        !function() {
-          var t;
-          if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
-          t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-          t.factory = function(e) {
-            return function() {
-              var n;
-              return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-            };
-          }, t.methods.forEach(function(e) {
-            t[e] = t.factory(e);
-          }), t.load = function(t) {
-            var e, n, o, i;
-            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
-            n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-          });
-        }();
-        drift.SNIPPET_VERSION = '0.3.1';
-        drift.load('c2966z7e38x3');
-        </script>
-        <!-- End of Async Drift Code -->
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                FastClick.attach(document.body);
-            }, false);
-        </script>
     </body>
 </html>
