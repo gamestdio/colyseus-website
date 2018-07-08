@@ -45,20 +45,41 @@ h1, h2, h3, h4, strong {
   color: #4e5054;
 }
 
-code, pre {
+h1 small {
+  margin-top: 0.5em;
+  display: block;
+  font-size: 2.5vh;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2.4em;
+}
+
+.flex h3 {
+  text-align: left;
+}
+
+.flex > div {
+  flex: 1;
+}
+
+pre {
   font-family: 'Roboto Mono', Monaco, courier, monospace;
   font-size: 0.8em;
-  background-color: #f8f8f8;
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
+  text-align: left;
 }
 
 code {
-  color: #e96900;
-  padding: 3px 5px;
-  margin: 0 2px;
   border-radius: 4px;
-  white-space: nowrap;
+  padding: 1em !important;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  /* white-space: nowrap; */
 }
 
 em { color: #787879; }
@@ -121,26 +142,6 @@ footer {
   padding: 4vh 4vh 12vh 4vh;
 }
 
-footer ul {
-  display: inline-block;
-  list-style: none;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-footer ul li a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px;
-  transition: color 0.2s, background-color 0.2s;
-}
-
-footer ul li a:hover {
-  text-decoration: underline;
-}
-
 header .inner img { margin-bottom: 4vh; }
 
 a {
@@ -191,6 +192,10 @@ div.row .column {
 
 section {
   padding: 10vh 4vw;
+}
+
+section.code {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 section.contrast, footer.contrast {
@@ -504,6 +509,10 @@ ul.showcase li a:hover::before {
 @media only screen and (max-width: 768px) {
   header img {
     width: 60%;
+  }
+
+  .flex {
+    flex-direction: column;
   }
 
   div.row .column {

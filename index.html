@@ -20,6 +20,12 @@
 
         <link rel="stylesheet" href="/css/index.css">
 
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/javascript.min.js"></script> -->
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,6 +35,7 @@
           ga('create', 'UA-67917511-5', 'auto');
           ga('send', 'pageview');
         </script>
+
     </head>
     <body>
       <!-- ribbon -->
@@ -51,7 +58,7 @@
       <header>
         <div class="inner">
           <img src="/images/logo-raw.png" width="200" alt="Colyseus">
-          <h2>Build next .IO games with Colyseus.</h2>
+          <h2>Multiplayer Game Server for Node.js</h2>
           <p>Focus on the gameplay instead of networking.</p>
 
           <nav>
@@ -93,6 +100,70 @@
           </ul>
           <p class="small">Need a client for a different platform? Share your interest on the <a href="https://discuss.colyseus.io">discussion board</a>!</p>
         </div>
+      </section>
+
+      <section id="example" class="code">
+        <h1>Example</h1>
+        <p>Sneak peak on basic usage. See <a href="https://github.com/gamestdio/colyseus-examples">more examples</a>.</p>
+        <div class="flex">
+          <div class="left">
+            <h3>Server-side</h3>
+            <pre>
+              <code class="javascript">import * as http from "http";
+import { Server, Room } from "colyseus";
+
+// Create HTTP & WebSocket servers
+const server = http.createServer();
+const gameServer = new Server();
+
+class ChatRoom extends Room {
+  // maximum number of clients per active session
+  maxClients = 4;
+
+  onInit () {
+      this.setState({ messages: [] });
+  }
+  onJoin (client) {
+      this.state.messages.push(`${ client.sessionId } joined.`);
+  }
+  onMessage (client, data) {
+      this.state.messages.push(data);
+  }
+}
+
+// Register ChatRoom as "chat"
+gameServer.register("chat", ChatRoom);
+gameServer.listen(2657);
+</code></pre>
+
+          </div>
+          <div class="right">
+            <h3>Client-side</h3>
+            <pre>
+              <code class="javascript">const client = new Colyseus.Client("ws://localhost:2657");
+const room = client.join("chat");
+
+room.onJoin.add(() => {
+  console.log(`${ room.sessionId } joined!`)
+})
+
+room.onStateChange.add((state) => {
+  console.log("new state:", state)
+});
+
+// listen for changes on a path on the state
+room.listen("messages/:index", (change) => {
+  console.log(change.operation); // ~> "add"
+  console.log(change.path.index); // ~> "1"
+  console.log(change.value); // ~> "Hello world!"
+});
+
+room.send("Hello world!");
+</code></pre>
+
+          </div>
+        </div>
+
       </section>
 
       <section id="features">
@@ -193,14 +264,6 @@
 
       <footer class="contrast" >
         <div class="inner">
-          <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#showcase">Showcase</a></li>
-            <li><a href="http://colyseus.io/docs" target="_blank">Documentation</a></li>
-            <li><a href="https://discuss.colyseus.io" target="_blank">Forum</a></li>
-            <li><a href="https://github.com/gamestdio/colyseus" target="_blank">GitHub</a></li>
-          </ul>
-
           <p>Copyright © 2018 <a href="https://github.com/endel">Endel Dreyer</a></p>
         </div>
       </footer>
