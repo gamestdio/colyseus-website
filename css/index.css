@@ -265,6 +265,15 @@ section .platforms ul li a.defold {
   height: 70px;
 }
 
+section .platforms ul li a.haxe {
+  background: url("../images/sprites/haxe.png") no-repeat top;
+  display: inline-block;
+  width: 55px;
+  height: 70px;
+  position: relative;
+  top: 5px;
+}
+
 section .platforms ul li a.construct3 {
   background: url("../images/sprites/construct3.png") no-repeat top;
   display: inline-block;
