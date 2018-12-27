@@ -138,6 +138,18 @@ nav ul li a:hover {
   /* color: #282828; */
 }
 
+a.button  {
+  display: inline-block;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em !important;
+  transition: color 0.2s, background-color 0.2s;
+  border-radius: 4px;
+}
+a.button:hover {
+  background-color: #7540f0 !important;
+}
+
 footer {
   padding: 4vh 4vh 12vh 4vh;
 }
@@ -212,6 +224,11 @@ section.headline {
   font-size: 1.5em;
   line-height: 1.7em;
   color: #4c4c4c;
+}
+
+section.work-for-hire {}
+section.work-for-hire img {
+  border-radius: 50%;
 }
 
 section.platforms {
