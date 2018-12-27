@@ -139,7 +139,9 @@ nav ul li a:hover {
 }
 
 a.button  {
-  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background: #4c4c4c;
   text-decoration: none;
   display: inline-block;
   padding: 1em !important;
@@ -165,18 +167,6 @@ a:hover {
   text-decoration: none;
 }
 
-a.button, input[type=submit] {
-  cursor: pointer;
-  color: #fff;
-  background: #4c4c4c;
-  text-decoration: none;
-  padding: 0.4em 1.4em;
-  border-radius: 4px;
-}
-
-a.button:hover, input[type=submit]:hover {
-  background: #282828;
-}
 
 p {
   margin: 2vh 0 2vh 0;
@@ -229,6 +219,7 @@ section.headline {
 section.work-for-hire {}
 section.work-for-hire img {
   border-radius: 50%;
+  /* border: 3px solid #00f200; */
 }
 
 section.platforms {
