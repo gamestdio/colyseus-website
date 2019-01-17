@@ -282,6 +282,13 @@ section .platforms ul li a.haxe {
   top: 5px;
 }
 
+section .platforms ul li a.cocos2d-x {
+  background: url("../images/sprites/cocos2d-x.png") no-repeat top;
+  display: inline-block;
+  width: 55px;
+  height: 70px;
+}
+
 section .platforms ul li a.construct3 {
   background: url("../images/sprites/construct3.png") no-repeat top;
   display: inline-block;
