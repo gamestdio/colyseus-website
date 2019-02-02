@@ -115,7 +115,7 @@ import { Server, Room } from "colyseus";
 
 // Create HTTP & WebSocket servers
 const server = http.createServer();
-const gameServer = new Server({server});
+const gameServer = new Server({ server });
 
 class ChatRoom extends Room {
   // maximum number of clients per active session
