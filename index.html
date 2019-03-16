@@ -110,31 +110,36 @@
           <div class="left">
             <h3>Server-side</h3>
             <pre>
-              <code class="javascript">import * as http from "http";
-import { Server, Room } from "colyseus";
+              <code class="javascript">import { Room } from "colyseus";
+import { Schema, MapSchema, type } from "@colyseus/schema";
 
-// Create HTTP & WebSocket servers
-const server = http.createServer();
-const gameServer = new Server({ server });
-
-class ChatRoom extends Room {
-  // maximum number of clients per active session
-  maxClients = 4;
-
-  onInit () {
-      this.setState({ messages: [] });
-  }
-  onJoin (client) {
-      this.state.messages.push(`${ client.sessionId } joined.`);
-  }
-  onMessage (client, data) {
-      this.state.messages.push(data);
-  }
+class Player extends Schema {
+  @type("number") x: number;
+  @type("number") y: number;
 }
 
-// Register ChatRoom as "chat"
-gameServer.register("chat", ChatRoom);
-gameServer.listen(2657);
+class State extends Schema {
+  @type("string")
+  currentTurn: string;
+
+  @type({ map: Player })
+  players = new MapSchema<Player>();
+}
+
+class GameRoom extends Room<State> {
+  onInit () {
+      this.setState(new State());
+  }
+  onJoin (client) {
+      this.state.players[client.sessionId] = new Player();
+  }
+  onLeave (client) {
+      delete this.state.players[client.sessionId];
+  }
+  onMessage (client, data) {
+      // handle player messages
+  }
+}
 </code></pre>
 
           </div>
@@ -142,22 +147,27 @@ gameServer.listen(2657);
             <h3>Client-side</h3>
             <pre>
               <code class="javascript">const client = new Colyseus.Client("ws://localhost:2657");
-const room = client.join("chat");
+const room = client.join("game");
 
 room.onJoin.add(() => {
-  console.log(`${ room.sessionId } joined!`)
+  console.log(`${ room.sessionId } joined!`);
 })
 
 room.onStateChange.add((state) => {
-  console.log("new state:", state)
-});
+  console.log(`${ room.sessionId } has a new state:`, state);
+})
 
-// listen for changes on a path on the state
-room.listen("messages/:index", (change) => {
-  console.log(change.operation); // ~> "add"
-  console.log(change.path.index); // ~> "1"
-  console.log(change.value); // ~> "Hello world!"
-});
+room.state.players.onAdd = function(player, i) {
+  console.log("player joined!", player);
+}
+
+room.state.players.onRemove = function(player, i) {
+  console.log("player left!", player);
+}
+
+room.state.players.onChange = function(player, i) {
+  console.log("player has been updated!", player);
+}
 
 room.send("Hello world!");
 </code></pre>
