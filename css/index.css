@@ -426,6 +426,47 @@ ul.plans > li > ul > li {
   margin: 0 auto;
 }
 
+/**
+ * Sponsors
+ */
+section.sponsors {
+  padding: 6vh 4vw;
+}
+
+section.sponsors h2 {
+  color: #fff;
+
+}
+section.sponsors a {
+  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-out;
+}
+
+section.sponsors a:active {
+  position: relative;
+  top: 4px;
+  border-bottom: none !important;
+}
+
+section.sponsors a:hover {
+  background-color: white;
+  border-bottom: 4px solid #c3c3c3;
+  margin-bottom: -4px;
+}
+
+section.sponsors a:hover img {
+  filter: grayscale(0);
+}
+
+section.sponsors a img {
+  width: 160px;
+  height: auto;
+  margin: 1em;
+  filter: grayscale();
+  transition: filter 0.2s ease-out;
+}
+
 /*
  * Showcase
  */
