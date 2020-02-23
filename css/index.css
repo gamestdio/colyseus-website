@@ -40,6 +40,10 @@ body {
 
 img { border: none; }
 
+h1 {
+  line-height: 1.3em;
+}
+
 h1, h2, h3, h4, strong {
   font-weight: 600;
   color: #4e5054;
@@ -168,12 +172,8 @@ a:hover {
 }
 
 
-p {
-  margin: 2vh 0 2vh 0;
-}
-p.small {
-  font-size: 0.8em;
-}
+p { margin: 2vh 0 2vh 0; }
+p.small { font-size: 0.8em; }
 
 h1 {
   font-size: 2em;
@@ -619,3 +619,21 @@ ul.showcase li > a:hover::before {
     width: 100%;
   }
 }
+
+/**
+ * MOGJ
+ */
+
+.mogj section {
+  padding: 15vh 10vw;
+}
+
+.mogj .inner {
+  width: auto;
+}
+
+.prefered-solution h3 {
+  margin-top: 2em;
+  color: #fff;
+}
+

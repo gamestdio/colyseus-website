@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MOGJ - Multiplayer Online Game Jam</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="Create Multiplayer Games in JavaScript using Colyseus.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet' type='text/css'>
+
+        <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Colyseus"/>
+        <meta property="og:url" content="https://colyseus.io"/>
+        <meta property="og:title" content="Colyseus - Multiplayer Game Server for Node.js"/>
+        <meta property="og:image" content="https://colyseus.io/images/share.png"/>
+
+        <link rel="stylesheet" href="/css/index.css">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/javascript.min.js"></script> -->
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-67917511-5', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+    </head>
+    <body class="mogj">
+
+      <!--header>
+        <div class="inner">
+          <img src="/images/logo-raw.png" width="200" alt="Colyseus">
+          <h2>MOGJ</h2>
+          <p>Multiplayer Online Game Jam</p>
+
+          <nav>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#showcase">Showcase</a></li>
+              <li><a href="https://docs.colyseus.io" target="_blank">Documentation</a></li>
+              <li><a href="https://discuss.colyseus.io" target="_blank">Forum</a></li>
+              <li><a href="https://discord.gg/RY8rRS7" target="_blank">Chat</a></li>
+              <li><a href="https://github.com/colyseus/colyseus" target="_blank">GitHub</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header-->
+
+      <section class="headline">
+        <div class="inner">
+          <h2>#MOGJ - <small>Multiplayer Online Game Jam</small></h2>
+          <p>
+            Welcome to the very first edition of #MOGJ. <br />
+            April 17-20th
+          </p>
+
+          <p class="small">The game theme will be available on April 17h.</p>
+          <a href="https://github.com/colyseus/MOGJ/issues/new">Submit your game!</a>
+        </div>
+      </section>
+
+      <section id="platforms" class="platforms headline">
+        <div class="platforms">
+          <p>Hey, we're in 2020!</p>
+          <p>Did you know that making multiplayer games is not as hard as it used to be?</p>
+          <!-- <p class="small">Need a client for a different platform? Share your interest on the <a href="https://discuss.colyseus.io">discussion board</a>!</p> -->
+        </div>
+      </section>
+
+      <section class="code" style="text-align: left;">
+        <h1>Rules</h1>
+        <p><strong>1.</strong> The source-code of the game should be available publicly (hosted on GitHub, BitBucket, GitLab, etc.)</p>
+        <p><strong>2.</strong> The game should be playable with 2 or more online players</p>
+        <p><strong>3.</strong> Make it easy for people to test your game by providing a playable link or download build</p>
+
+        <br />
+
+        <h1>FAQ</h1>
+        <p><strong>How the theme will be decided?</strong> It will be the same theme from Ludum Dare 46 Game Jam, which will be happening at the same time. You can submit your game on both game jams.</p>
+        <p><strong>How to submit your game:</strong> A link to submit your game will be available after April 17th.</p>
+      </section>
+
+      <section class="contrast prefered-solution">
+        <div class="inner">
+          <h1>Select your prefered solution</h1>
+
+          <div style="text-align: left;">
+            <h3><a href="https://colyseus.io/">Colyseus</a></h3>
+            <p>Colyseus is an Authoritative Multiplayer Game Server for Node.js, with clients available for the Web, Unity3d, Defold, Haxe, and Cocos2d-X.</p>
+            <p><a href="https://docs.colyseus.io/getting-started/server/">Getting started with Colyseus</a></p>
+
+            <h3><a href="https://modd.io">modd.io</a></h3>
+            <p>Modd.io is designer-centric game engine enabling anyone to make games without coding. Over 3,000 games are created every month, and some games have been played over ten millions times.</p>
+            <p><a href="https://www.modd.io/tutorials">Getting started with modd.io</a></p>
+
+            <h3><a href="https://timetocode.com/nengi">nengi</a></h3>
+            <p>Nengi.js is a networking library/engine for node.js and HTML5.</p>
+            <p><a href="https://timetocode.com/nengi/intro-1">Getting started with nengi</a></p>
+
+            <h3><a href="https://www.photonengine.com/">Photon Engine</a></h3>
+            <p>Global cross platform multiplayer game backend as a service (SaaS, Cloud) for synchronous and asynchronous games and applications. SDKs are available for android, iOS, .NET., Mac OS, Unity 3D, Windows, Unreal Engine, HTML5 and others.</p>
+            <p><a href="https://doc.photonengine.com/en-us/pun/current/getting-started/pun-intro">Getting started with Photon Engine</a></p>
+
+            <h3><a href="https://www.smartfoxserver.com/">SmartFox Server</a></h3>
+            <p>SmartFoxServer is a comprehensive SDK for rapidly developing multiplayer games and applications with Adobe Flash/Flex/Air, Unity, HTML5, iOS, Universal Windows Platform, Android, Java, C++ and more.</p>
+            <p><a href="http://docs2x.smartfoxserver.com/GettingStarted/installation">Getting started with SmartFox Server</a></p>
+          </div>
+        </div>
+      </section>
+    </body>
+</html>
