@@ -463,7 +463,7 @@ section.sponsors a img {
   width: 160px;
   height: auto;
   margin: 1em;
-  filter: grayscale();
+  filter: grayscale(90%);
   transition: filter 0.2s ease-out;
 }
 
