@@ -137,15 +137,16 @@ class State extends Schema {
 class GameRoom extends Room<State> {
   onCreate () {
       this.setState(new State());
+
+      this.onMessage("fire", (client, message) => {
+        // handle player message
+      });
   }
   onJoin (client) {
       this.state.players[client.sessionId] = new Player();
   }
   onLeave (client) {
       delete this.state.players[client.sessionId];
-  }
-  onMessage (client, data) {
-      // handle player messages
   }
 }
 </code></pre>
@@ -176,7 +177,7 @@ try {
     console.log(`${ room.sessionId } has a new state:`, state);
   })
 
-  room.send("Hello world!");
+  room.send("fire", { angle: 42 });
 
 } catch(e) {
   console.error("couldn't join room:", e);
