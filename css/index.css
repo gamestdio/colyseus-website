@@ -222,7 +222,7 @@ section.work-for-hire img {
   /* border: 3px solid #00f200; */
 }
 
-section.platforms {
+section.high-contrast {
   /* background: #04ddd4; */
   color: #fff;
   background: #7540f0;
@@ -355,7 +355,7 @@ ul.features > li svg {
 }
 
 ul.features > li {
-  width: 280px;
+  width: 21vw;
   padding: 1em;
   margin: 0 10px;
   margin-bottom: 1em;
@@ -470,6 +470,45 @@ section.sponsors a img {
 /*
  * Showcase
  */
+section#showcase { padding: 10vh 0; }
+
+.showcase-nav {
+  position: relative;
+}
+.showcase-nav > button {
+  background-color: rgb(40, 40, 40, 0.7);
+  color: #fff;
+  border: 0;
+  outline: none;
+  transition: background-color 0.2s;
+  font-size: 2em;
+  z-index: 999;
+  cursor: pointer;
+
+  position: absolute;
+  top: 136px;
+  /* width: 6vw;
+  height: 6vw; */
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+}
+.showcase-nav > button:hover { background-color: rgb(40, 40, 40); }
+
+.showcase-nav .left {
+  left: 1vw;
+  /* border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; */
+}
+
+.showcase-nav .right {
+  right: 1vw;
+  /* border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; */
+}
+
+/* end of showcase navigation */
+
 ul.showcase {
   display: inline-block;
   list-style: none;
@@ -513,9 +552,9 @@ ul.showcase li > a {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 
-  -webkit-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
+  /* -webkit-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75); */
 }
 
 ul.showcase li > a:active {
@@ -529,7 +568,7 @@ ul.showcase li > a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.2);
   content: '';
   transition: background-color 0.2s;
 
@@ -539,6 +578,18 @@ ul.showcase li > a::before {
 
 ul.showcase li > a:hover::before {
   background: rgba(0,0,0,0);
+}
+
+/**
+ * Community!
+ */
+#community {
+  /* background-color: rgb(218, 130, 45); */
+  background-color: #282828;
+}
+
+#community h1 svg {
+  height: 2em;
 }
 
 /**
@@ -586,6 +637,10 @@ ul.showcase li > a:hover::before {
     flex-direction: column;
   }
 
+  ul.features > li {
+    width: 40vw;
+  }
+
   div.row .column {
     display: block;
     width: 100%;
@@ -610,6 +665,10 @@ ul.showcase li > a:hover::before {
 
   section {
     padding: 6vh 1vh;
+  }
+
+  ul.features > li {
+    width: 100% !important;
   }
 
   ul.showcase li {

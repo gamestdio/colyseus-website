@@ -36,6 +36,28 @@
           ga('send', 'pageview');
         </script>
 
+        <!-- tiny-slider (https://github.com/ganlanyuan/tiny-slider/) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+        <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', function () {
+            var isMobile = (window.innerWidth < 728);
+            var slider = tns({
+              container: 'ul.showcase',
+              items: isMobile ? 1 : 3,
+              autoWidth: !isMobile,
+              center: true,
+              slideBy: 'page',
+              // autoplay: true,
+              nav: false,
+              autoplayButtonOutput: false,
+              prevButton: ".showcase-nav .left",
+              nextButton: ".showcase-nav .right",
+            });
+          });
+        </script>
+
     </head>
     <body>
       <!-- ribbon -->
@@ -61,6 +83,11 @@
           <h2>Multiplayer Game Server for Node.js</h2>
           <p>Focus on the gameplay instead of networking.</p>
 
+          <!-- <p>
+            Colyseus is fully open-source. Please consider donating any amount to support the project ❤️ <br />
+            <a href="https://patreon.com/endel" title="Support Colyseus on Patreon"><img src="https://img.shields.io/badge/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.herokuapp.com%2Fendel%2F&amp;style=for-the-badge&amp;label=donations" alt="Support Colyseus on Patreon"></a>
+          </p> -->
+
           <nav>
             <ul>
               <li><a href="#features">Features</a></li>
@@ -72,9 +99,6 @@
               <li><a href="https://github.com/colyseus/colyseus" target="_blank">GitHub</a></li>
             </ul>
           </nav>
-
-          <script src="https://codefund.io/scripts/b3fcf8ed-d339-4491-888c-2e997d401b8a/embed.js?template=centered"></script>
-          <div id="codefund_ad"></div>
         </div>
       </header>
 
@@ -86,7 +110,7 @@
         </div>
       </section>
 
-      <section id="platforms" class="platforms">
+      <section id="platforms" class="high-contrast">
         <div class="platforms">
           <h1>Supported platforms</h1>
           <p>Colyseus comes with official support for these platforms.</p>
@@ -189,10 +213,9 @@ try {
 
       </section>
 
-      <section id="features">
+      <!-- <section id="features">
         <h1>Features</h1>
         <p>Authoritative server. Designed to be intuitive and simple to use.</p>
-
         <ul class="features">
           <li>
             <svg aria-hidden="true" data-prefix="fas" data-icon="bolt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-bolt fa-w-10"><path fill="currentColor" d="M295.973 160H180.572L215.19 30.184C219.25 14.956 207.756 0 192 0H56C43.971 0 33.8 8.905 32.211 20.828l-31.996 240C-1.704 275.217 9.504 288 24.004 288h118.701L96.646 482.466C93.05 497.649 104.659 512 119.992 512c8.35 0 16.376-4.374 20.778-11.978l175.973-303.997c9.244-15.967-2.288-36.025-20.77-36.025z" class=""></path></svg>
@@ -241,8 +264,7 @@ try {
             <p>Colyseus is free software, released under the permissive <a href="https://tldrlegal.com/license/mit-license">MIT License</a>.</p>
           </li>
         </ul>
-
-      </section>
+      </section> -->
 
       <section class="contrast" id="showcase">
         <div class="inner">
@@ -250,6 +272,11 @@ try {
           <p>
             A selection of games powered by Colyseus, made by the community.
           </p>
+        </div>
+
+        <div class="showcase-nav">
+          <button class="left">&laquo;</a>
+          <button class="right">&raquo;</a>
         </div>
 
         <ul class="showcase">
@@ -274,14 +301,6 @@ try {
             <a href="http://partytoons.io" style="background-image: url(images/projects/partytoons.jpg);" target="_blank"></a>
             <span>
               PartyToons.io <br/>
-              <small>by <a href="http://www.tinydobbins.com/" target="_blank">TinyDobbins</a></small>
-            </span>
-          </li>
-
-          <li>
-            <a href="http://gunfight.io" style="background-image: url(images/projects/gunfight.png);" target="_blank"></a>
-            <span>
-              GunFight.io <br/>
               <small>by <a href="http://www.tinydobbins.com/" target="_blank">TinyDobbins</a></small>
             </span>
           </li>
@@ -326,13 +345,13 @@ try {
             </span>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="https://play.google.com/store/apps/details?id=com.mkcelikbas.OnlineWordChain&rdid=com.mkcelikbas.OnlineWordChain" style="background-image: url(images/projects/onlinewordchain.jpg);" target="_blank"></a>
             <span>
               Online Word Chain <br/>
               <small>by <a href="https://play.google.com/store/apps/developer?id=MkCelikbas" target="_blank">Mustafa Kadir Çelikbaş</a></small>
             </span>
-          </li>
+          </li> -->
 
           <!-- <li> -->
           <!--   <a href="http://crashracing.com" style="background&#45;image: url(images/projects/crashracing.png)" target="_blank"></a> -->
@@ -350,27 +369,40 @@ try {
             </span>
           </li>
 
+          <li>
+            <a href="http://gunfight.io" style="background-image: url(images/projects/gunfight.png);" target="_blank"></a>
+            <span>
+              GunFight.io <br/>
+              <small>by <a href="http://www.tinydobbins.com/" target="_blank">TinyDobbins</a></small>
+            </span>
+          </li>
+
         </ul>
       </section>
 
-      <!--section class="platforms" id="community">
+      <section class="high-contrast" id="community">
         <div class="platforms">
-          <h1>Join the community!</h1>
-          <p>We are all lovers of multiplayer games.</p>
+          <h1>
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-discord fa-w-14 fa-3x"><path fill="currentColor" d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z" class=""></path></svg>
+            <br/>
+            Join the community!
+          </h1>
+          <p>Come hang out with professionals, hobbysts, students and enthusiasts of online multiplayer games.</p>
           <p>
-            <a href="https://discord.gg/RY8rRS7"><img src="https://img.shields.io/discord/525739117951320081.svg?label=discord&style=for-the-badge&colorB=7581dc&logo=discord&logoColor=white"></a>
+            <a href="https://discuss.colyseus.io/">Forum</a> ·
+            <a href="https://discord.gg/RY8rRS7">Discord</a>
           </p>
         </div>
-      </section-->
+      </section>
 
-      <section class="work-for-hire">
+      <!--section class="work-for-hire">
         <h1>Work for hire</h1>
         <p>Hi, I'm Endel. I'm working as a full-time freelancer since 2018.</p>
         <p>
           <a href="https://github.com/endel" target="_blank"><img src="https://www.gravatar.com/avatar/c35f590e9178794d7f4c4f07192d3772?s=300" alt="@endel"/></a>
         </p>
         <a class="button" href="mailto:endel.dreyer@gmail.com?subject=Colyseus%20-%20Work%20for%20hire">Get in touch!</a>
-      </section>
+      </section-->
 
       <footer class="contrast" >
         <div class="inner">
