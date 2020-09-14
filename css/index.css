@@ -438,7 +438,10 @@ ul.features {
 }
 
 ul.features > li svg {
-  color: #4c4c4c;
+  color: #fff;
+  height: 4em;
+  width: 4em;
+  margin-bottom: 0.5em;
 }
 
 ul.features > li {
@@ -448,13 +451,8 @@ ul.features > li {
   margin-bottom: 1em;
 }
 
-ul.features > li svg {
-  height: 42px;
-  margin-bottom: 0.5em;
-}
-
 ul.features > li p {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 
