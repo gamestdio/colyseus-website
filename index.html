@@ -21,12 +21,6 @@
 
         <link rel="stylesheet" href="/css/index.css">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/javascript.min.js"></script> -->
-
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -62,7 +56,6 @@
             });
 
             // show / hide newsletter section
-            var newsletterSection = document.getElementById('mc_embed_signup');
             var nav = document.querySelector('nav')
             document.addEventListener("scroll", function (e) {
               if (window.scrollY > screen.height / 3) {
@@ -71,38 +64,31 @@
               } else {
                 nav.classList.remove("visible");
               }
-
-              if (window.scrollY > 900) {
-                newsletterSection.classList.add("visible");
-
-              } else {
-                newsletterSection.classList.remove("visible");
-              }
             });
-
           });
         </script>
 
     </head>
     <body>
 
-      <!-- Begin MailChimp Signup Form -->
+      <!-- Begin MailChimp Signup Form
+
       <div id="mc_embed_signup">
         <form action="https://gamestd.us15.list-manage.com/subscribe/post?u=4be3bcbc3d2a6bfd9c888407e&amp;id=52759ee705" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
             <label for="mce-EMAIL">Stay up-to-date: sign up for our newsletter.</label>
             <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4be3bcbc3d2a6bfd9c888407e_52759ee705" tabindex="-1" value=""></div>
             <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
           </div>
         </form>
       </div>
-      <!--End mc_embed_signup-->
+
+      End mc_embed_signup-->
 
       <header>
         <div class="inner">
-          <img class="logo" src="/images/logo-full.png" alt="Colyseus - Multiplayer Framework for Node.js">
+          <img class="logo" src="/images/logos/logo-white.png" alt="Colyseus - Multiplayer Framework for Node.js">
           <h1>Multiplayer Framework for Node.js</h1>
 
           <!-- <p>Focus on the gameplay instead of networking.</p> -->
@@ -167,11 +153,11 @@
       </header>
 
       <nav>
-        <a href="#"><img class="logo" src="/images/logo-full.png" alt="Colyseus"></a>
+        <a href="/"><img class="logo" src="/images/logos/logo-white.png" alt="Colyseus"></a>
         <ul>
-          <li><a href="#features">Features</a> ·</li>
-          <li><a href="#showcase">Showcase</a> ·</li>
-          <li><a href="#community">Community</a> ·</li>
+          <li><a href="/#features">Features</a> ·</li>
+          <li><a href="/#showcase">Showcase</a> ·</li>
+          <li><a href="/#community">Community</a> ·</li>
           <li><a href="https://docs.colyseus.io" target="_blank">Documentation</a> ·</li>
           <li>
             <a href="https://github.com/colyseus/colyseus" target="_blank">
@@ -238,7 +224,7 @@
         </div>
       </section>
 
-      <section id="example" class="code">
+      <section id="example">
         <h1>How it works</h1>
         <p>Have a glance on the usage of the framework. <br/>See <a href="https://docs.google.com/presentation/d/e/2PACX-1vSjJtmU-SIkng_bFQ5z1000M6nPSoAoQL54j0Y_Cbg7R5tRe9FXLKaBmcKbY_iyEpnMqQGDjx_335QJ/embed?start=false&loop=false&delayms=3000&slide=id.p" target="_blank">presentation overview</a>, and <a href="https://github.com/colyseus/colyseus#usage-examples" target="_blank">more examples</a>.</p>
         <p>TODO: record an introductory video.</p>
@@ -301,7 +287,7 @@
         <div class="inner">
           <h1>Showcase</h1>
           <p>
-            A selection of games powered by Colyseus, made by the community.
+            A selection of games powered by Colyseus.
           </p>
         </div>
 
@@ -463,7 +449,36 @@
 
       <footer class="high-contrast">
         <div class="inner">
+
+          <ul>
+            <li><strong>Colyseus</strong></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="https://docs.colyseus.io/">Documentation</a></li>
+            <li><a href="https://github.com/colyseus/colyseus-examples">Examples</a></li>
+            <li><a href="https://github.com/colyseus/colyseus">GitHub</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>News</strong></li>
+            <li><a href="http://twitter.com/colyseus" target="_blank">Follow on Twitter</a></li>
+            <li><a href="http://eepurl.com/dmfn7r" target="_blank">Newsletter</a></li>
+            <li><a href="https://github.com/colyseus/colyseus/releases" target="_blank">Release Announcements</a></li>
+          </ul>
+
+          <!-- <ul>
+            <li><strong>Learn</strong></li>
+            <li><a href="https://docs.colyseus.io/">Documentation</a></li>
+            <li><a href="https://github.com/colyseus/colyseus">GitHub</a></li>
+          </ul> -->
+
+          <ul>
+            <li><strong>Legal</strong></li>
+            <li><a href="https://github.com/colyseus/colyseus/blob/master/LICENSE">MIT License</a></li>
+            <li><a href="/logo-and-trademark.html">Logo & Trademark</a></li>
+          </ul>
+
           <p>Copyright © 2020 <a href="https://github.com/endel">Endel Dreyer</a></p>
+
         </div>
       </footer>
     </body>
