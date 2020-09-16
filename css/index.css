@@ -790,11 +790,11 @@ h1 svg {
 }
 
 #mc_embed_signup input[type=submit]:hover {
-  transform: translateY(3px);
+  /* transform: translateY(3px); */
 
-  -webkit-box-shadow: none;
+  /* -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none;
+  box-shadow: none; */
 
   background: #581de2;
   border-color: #581de2;
