@@ -661,6 +661,7 @@ ul.showcase li > a:hover::before {
  */
 #community h1 svg {
   height: 2em;
+  margin-bottom: 0.5em;
 }
 
 /* #mc_embed_signup {
