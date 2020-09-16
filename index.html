@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta name="description" content="Create Multiplayer Games in JavaScript using Colyseus.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no">
         <meta name="keywords" content="colyseus, multiplayer, netcode, javascript, typescript, nodejs, html5, unity, defold, haxe, cocos2d-x" />
 
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
@@ -100,7 +100,7 @@
             </li>
             <li>
               <a href="#patreon">
-                Support the development <!--  -->
+                Support the development
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 21h9.62c1.169 0 2.276-.509 3.037-1.397l5.102-5.952c.217-.253.294-.597.205-.918s-.332-.576-.647-.682l-1.968-.656c-.951-.317-2.042-.122-2.823.503l-3.185 2.547-.617-1.235C12.042 11.847 10.671 11 9.146 11H4c-1.103 0-2 .897-2 2v6C2 20.103 2.897 21 4 21zM4 13h5.146c.763 0 1.448.423 1.789 1.105L11.382 15H10 8 7v2h1 2 3c.001 0 .002 0 .002 0 .001 0 .001 0 .001 0 .001 0 .001 0 .002 0 0 0 .002 0 .006 0 .001 0 .002 0 .002 0 .001 0 .001 0 .001 0 .156-.002.308-.041.442-.11.001 0 .002 0 .003-.001.001-.001.003-.001.004-.002 0 0 .001 0 .001 0l.001 0c.001 0 .001 0 .001 0 .001 0 .001 0 .002-.001 0 0 .001 0 .001 0l.001 0c.001 0 .001 0 .001 0 .001 0 .001 0 .001 0 .001 0 .001 0 .001-.001.009.003.003-.001.003-.001.01 0 .002-.001.002-.001.001 0 .001 0 .001 0 .002 0 .002 0 .002-.001.001 0 .002-.001.003-.001s.001 0 .002-.001c0 0 .001-.001.002-.001v0c.001 0 .002-.001.003-.001s.001 0 .002-.001c.003 0 .001-.001.002-.001.001 0 .002-.001.003-.002s.001 0 .002-.001c.001-.001.001-.001.002-.001v0c.002-.001.003-.001.003-.001.001 0 .001 0 .002-.001 0 0 0 0 .001 0s.002-.001.002-.001c.001 0 .001 0 .001 0 .001 0 .001 0 .002-.001v0c.001 0 .001 0 .002-.001.009-.001.003-.001.003-.001 0-.001.002-.001.002-.001.038-.023.075-.049.11-.078l4.146-3.317c.262-.208.623-.273.94-.167l.557.186-4.133 4.823C14.759 18.745 14.205 19 13.62 19H4V13zM16 2L16 2c-.003 0-.012 0-.017 0C15.82 2.002 14.977 2.039 14 2.705c-.951-.648-1.774-.7-1.968-.704C12.023 2.001 12.008 2 12.002 2 12.001 2 12.001 2 12 2l0 0c-.001 0-.002 0-.002 0l0 0c-.801 0-1.555.313-2.119.878C9.313 3.445 9 4.198 9 5s.313 1.555.861 2.104l3.414 3.586C13.465 10.888 13.727 11 14 11s.535-.112.725-.311l3.396-3.568C18.688 6.555 19 5.802 19 5s-.313-1.555-.878-2.121C17.557 2.313 16.803 2 16.002 2l0 0C16.002 2 16.001 2 16 2zM17 5c0 .267-.104.518-.311.725L14 8.55l-2.707-2.843C11.104 5.518 11 5.267 11 5s.104-.518.294-.708C11.481 4.104 11.732 4 11.979 4c.025.001.502.032 1.067.485.081.065.163.139.247.222L14 5.414l.707-.707c.084-.083.166-.157.247-.222.529-.425.976-.478 1.052-.484.265.001.514.104.701.292C16.896 4.482 17 4.733 17 5z"></path></svg>
               </a>
             </li>
@@ -407,21 +407,22 @@
                 d="M4 21h9.62c1.169 0 2.276-.509 3.037-1.397l5.102-5.952c.217-.253.294-.597.205-.918s-.332-.576-.647-.682l-1.968-.656c-.951-.317-2.042-.122-2.823.503l-3.185 2.547-.617-1.235C12.042 11.847 10.671 11 9.146 11H4c-1.103 0-2 .897-2 2v6C2 20.103 2.897 21 4 21zM4 13h5.146c.763 0 1.448.423 1.789 1.105L11.382 15H10 8 7v2h1 2 3c.001 0 .002 0 .002 0 .001 0 .001 0 .001 0 .001 0 .001 0 .002 0 0 0 .002 0 .006 0 .001 0 .002 0 .002 0 .001 0 .001 0 .001 0 .156-.002.308-.041.442-.11.001 0 .002 0 .003-.001.001-.001.003-.001.004-.002 0 0 .001 0 .001 0l.001 0c.001 0 .001 0 .001 0 .001 0 .001 0 .002-.001 0 0 .001 0 .001 0l.001 0c.001 0 .001 0 .001 0 .001 0 .001 0 .001 0 .001 0 .001 0 .001-.001.009.003.003-.001.003-.001.01 0 .002-.001.002-.001.001 0 .001 0 .001 0 .002 0 .002 0 .002-.001.001 0 .002-.001.003-.001s.001 0 .002-.001c0 0 .001-.001.002-.001v0c.001 0 .002-.001.003-.001s.001 0 .002-.001c.003 0 .001-.001.002-.001.001 0 .002-.001.003-.002s.001 0 .002-.001c.001-.001.001-.001.002-.001v0c.002-.001.003-.001.003-.001.001 0 .001 0 .002-.001 0 0 0 0 .001 0s.002-.001.002-.001c.001 0 .001 0 .001 0 .001 0 .001 0 .002-.001v0c.001 0 .001 0 .002-.001.009-.001.003-.001.003-.001 0-.001.002-.001.002-.001.038-.023.075-.049.11-.078l4.146-3.317c.262-.208.623-.273.94-.167l.557.186-4.133 4.823C14.759 18.745 14.205 19 13.62 19H4V13zM16 2L16 2c-.003 0-.012 0-.017 0C15.82 2.002 14.977 2.039 14 2.705c-.951-.648-1.774-.7-1.968-.704C12.023 2.001 12.008 2 12.002 2 12.001 2 12.001 2 12 2l0 0c-.001 0-.002 0-.002 0l0 0c-.801 0-1.555.313-2.119.878C9.313 3.445 9 4.198 9 5s.313 1.555.861 2.104l3.414 3.586C13.465 10.888 13.727 11 14 11s.535-.112.725-.311l3.396-3.568C18.688 6.555 19 5.802 19 5s-.313-1.555-.878-2.121C17.557 2.313 16.803 2 16.002 2l0 0C16.002 2 16.001 2 16 2zM17 5c0 .267-.104.518-.311.725L14 8.55l-2.707-2.843C11.104 5.518 11 5.267 11 5s.104-.518.294-.708C11.481 4.104 11.732 4 11.979 4c.025.001.502.032 1.067.485.081.065.163.139.247.222L14 5.414l.707-.707c.084-.083.166-.157.247-.222.529-.425.976-.478 1.052-.484.265.001.514.104.701.292C16.896 4.482 17 4.733 17 5z">
               </path>
             </svg>
-            Support Colyseus Development
+            Donate
           </h1>
+          <h2>Support Colyseus Development</h2>
 
           <p>
-            <img src="/images/me/me1.jpg" style="float: left; padding: 1em;" width="300" alt="Endel having a snack">
+            <img src="/images/me/me1.jpg" width="400" alt="A picture of Endel doing serious stuff">
             Colyseus was born in 2015 as a side-project for my personal adventures, and it has been evolving constantly based on the needs of the community and my own. The audacious dream is to make Colyseus one day a standard netcode & matchmaking solution for any kind of project you can think of!
           </p>
 
           <ul class="buttons">
             <li>
-              <a href="https://www.patreon.com/join/endel" target="_blank" class="contrast">Become a Patron ❤️ </a>
+              <a href="https://www.patreon.com/join/endel" target="_blank" class="contrast">I want to support ❤️ </a>
             </li>
           </ul>
           <p>
-            <small>If you are not comfortable with recurring pledges, <br />I also accept <a href="http://paypal.me/endeld">one-time
+            <small>If you are not comfortable with recurring pledges, <br />You can make <a href="http://paypal.me/endeld">one-off
                 donations via PayPal</a> ❤️</small>
           </p>
 
@@ -462,6 +463,33 @@
         </p>
         <a class="button" href="mailto:endel.dreyer@gmail.com?subject=Colyseus%20-%20Work%20for%20hire">Get in touch!</a>
       </section-->
+
+      <section>
+        <div class="inner">
+          <h1>
+            Stay Updated
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M22 20.007a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V19h18V7.3l-8 7.2-10-9V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v16.007zM4.434 5L12 11.81 19.566 5H4.434zM0 15h8v2H0v-2zm0-5h5v2H0v-2z"></path></g></svg>
+          </h1>
+          <!-- <h2>WE DONT SPAM.</h2> -->
+
+          <p>Be the first to get release announcements, articles, tutorials & more.</p>
+
+          <div id="mc_embed_signup">
+            <form action="https://gamestd.us15.list-manage.com/subscribe/post?u=4be3bcbc3d2a6bfd9c888407e&amp;id=52759ee705" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4be3bcbc3d2a6bfd9c888407e_52759ee705" tabindex="-1" value=""></div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+            </form>
+
+            <p>
+              <small>(You will receive a maximum of 1 email per month)</small>
+            </p>
+          </div>
+
+        </div>
+      </section>
 
       <footer class="high-contrast">
         <div class="inner">
