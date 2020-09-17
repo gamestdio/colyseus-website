@@ -231,9 +231,9 @@ section.support img {
   width: auto;
   max-width: 50%; */
   width: 30vw;
-  border-radius: 1.3em;
+  border-radius: 0.5em;
   float: right;
-  padding: 0 1em;
+  margin-left: 1em;
 }
 
 section.support ul.buttons li a.contrast {
@@ -778,15 +778,15 @@ h1 svg {
   white-space: nowrap;
 
   color: #fff;
-  background: #7540f0;
+  background-color: #7540f0;
   border-color: #7540f0;
 
   -webkit-box-shadow: 0px 3px 0px 0 #581de2;
   -moz-box-shadow: 0px 3px 0px 0 #581de2;
   box-shadow: 0px 3px 0px 0 #581de2;
 
-  transition: box-shadow 0.2s cubic-bezier(0.33, 1, 0.68, 1),
-              transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: background-color 0.2s cubic-bezier(0.33, 1, 0.68, 1),
+              border-color 0.2s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 #mc_embed_signup input[type=submit]:hover {
@@ -796,7 +796,7 @@ h1 svg {
   -moz-box-shadow: none;
   box-shadow: none; */
 
-  background: #581de2;
+  background-color: #581de2;
   border-color: #581de2;
   color: #fff;
 }
