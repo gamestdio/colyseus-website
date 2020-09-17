@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* color: #787879; */
+  background-color: #000;
   color: #444;
   margin: 0;
   text-align: center;
@@ -107,13 +108,24 @@ p { word-spacing: 0.05em; }
 header {
   /* font-family: OptimusPrinceps, serif; */
   /* background: url("../images/header.jpg"); */
-  background: url("../images/header-new.jpg");
-  background-color: #000;
-  background-position: right;
-  background-size: cover;
   padding: 14vh 2vw 6vh 2vw;
   height: 100vh;
   color: #fff;
+  position: relative;
+}
+
+header::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/header-new.jpg");
+  background-position: right;
+  background-size: cover;
+  z-index: -1;
+  animation: fadeIn 4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 header h1 {
@@ -448,6 +460,7 @@ div.row .column {
 }
 
 section {
+  background: #fff;
   padding: 16vh 8vw;
 }
 
@@ -466,7 +479,6 @@ section.contrast h3 {
 }
 
 section.headline {
-  margin: 4vh 0;
   font-size: 1.5em;
   line-height: 1.7em;
   color: #282828;
@@ -905,4 +917,15 @@ body.logos-and-trademark section a:hover img {
   -webkit-box-shadow: 0 0 0 0 #ccc;
   -moz-box-shadow: 0 0 0 0 #ccc;
   box-shadow: 0 0 0 0 #ccc;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
