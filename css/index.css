@@ -243,7 +243,7 @@ section.support img {
   width: auto;
   max-width: 50%; */
   width: 30vw;
-  border-radius: 0.5em;
+  border-radius: 50%;
   float: right;
   margin-left: 1em;
 }
