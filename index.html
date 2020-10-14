@@ -32,6 +32,12 @@
           ga('send', 'pageview');
         </script>
 
+        <!-- prism -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism-tomorrow.css">
+
         <!-- tiny-slider (https://github.com/ganlanyuan/tiny-slider/) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -40,10 +46,10 @@
 
           document.addEventListener('DOMContentLoaded', function () {
             //
-            // setup shwocase section
+            // setup showcase section
             //
             var isMobile = (window.innerWidth < 728);
-            var slider = tns({
+            var showcaseSlider = tns({
               container: 'ul.showcase',
               items: isMobile ? 1 : 3,
               autoWidth: !isMobile,
@@ -52,8 +58,26 @@
               // autoplay: true,
               nav: false,
               autoplayButtonOutput: false,
-              prevButton: ".showcase-nav .left",
-              nextButton: ".showcase-nav .right",
+              prevButton: "#showcase .tns-nav .left",
+              nextButton: "#showcase .tns-nav .right",
+            });
+
+            //
+            // setup how-it-works section
+            //
+            var howItWorksSlider = tns({
+              container: '#how-it-works > .code-blocks',
+              mode: "gallery",
+              loop: false,
+              items: 1,
+              // autoWidth: true,
+              // center: true,
+              slideBy: 'page',
+              // autoplay: true,
+              nav: false,
+              autoplayButtonOutput: false,
+              prevButton: "#how-it-works .tns-nav .left",
+              nextButton: "#how-it-works .tns-nav .right",
             });
 
             // show / hide newsletter section
@@ -160,6 +184,7 @@
           <li><a href="/#showcase">Showcase</a> ·</li>
           <li><a href="/#community">Community</a> ·</li>
           <li><a href="https://docs.colyseus.io" target="_blank">Documentation</a> ·</li>
+          <li><a href="https://docs.colyseus.io/faq/">FAQ</a> ·</li>
           <li>
             <a href="https://github.com/colyseus/colyseus" target="_blank">
               GitHub
@@ -234,20 +259,86 @@
           <li>
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M-.102 12.53C.01 5.956 4.613 1.277 10.248.52c6.718-.9 12.371 3.67 13.456 9.735 1.03 5.75-2.13 11.133-7.339 13.263-.45.184-.697.082-.87-.373l-2.587-6.728c-.15-.392-.048-.64.34-.814 1.17-.532 1.901-1.423 2.095-2.7a3.46 3.46 0 0 0-3.122-3.98 3.463 3.463 0 0 0-3.75 2.89c-.253 1.598.536 3.084 2.027 3.76.464.214.556.418.377.892l-2.6 6.772c-.125.334-.4.45-.75.315a11.98 11.98 0 0 1-6.33-5.76c-1.206-2.383-1.22-4.247-1.297-5.263zm1.012-.092c.02.32.03.692.063 1.07.305 3.48 2.4 6.946 6.34 8.862.156.073.214.04.272-.11q1.082-2.84 2.178-5.68c.063-.16.03-.231-.116-.323-1.53-.963-2.29-2.348-2.207-4.163.048-1.045.45-1.96 1.152-2.725 1.452-1.583 3.727-1.927 5.59-.852a4.436 4.436 0 0 1 2.188 4.376c-.174 1.48-.934 2.609-2.212 3.378-.13.078-.17.14-.11.29q1.102 2.847 2.187 5.698c.058.15.116.184.27.11 1.72-.802 3.157-1.95 4.265-3.484 1.685-2.333 2.377-4.932 2.048-7.793-.663-5.687-5.78-10.397-12.368-9.584-5.135.63-9.453 4.96-9.54 10.93z"></path></svg>
             <h3>Open-source</h3>
-            <p>Free to use, modify and redistribute, under the most permissive MIT License.</p>
+            <p>Free to use, under the most permissive <a target="_blank" href="https://github.com/colyseus/colyseus/blob/master/LICENSE">MIT License</a>.</p>
           </li>
-
         </ul>
       </section>
 
-      <section id="example">
+      <section id="how-it-works">
         <h1>How it works</h1>
+
         <p>
-          Have a glance on the usage of the framework.
-          <br />
-          <small>(See <a href="https://docs.google.com/presentation/d/e/2PACX-1vSjJtmU-SIkng_bFQ5z1000M6nPSoAoQL54j0Y_Cbg7R5tRe9FXLKaBmcKbY_iyEpnMqQGDjx_335QJ/embed?start=false&loop=false&delayms=3000&slide=id.p" target="_blank">presentation overview</a>, and <a href="https://github.com/colyseus/colyseus#usage-examples" target="_blank">more examples</a>)</small>
+          Have a glance on the usage of the framework. (See <a href="https://docs.google.com/presentation/d/e/2PACX-1vSjJtmU-SIkng_bFQ5z1000M6nPSoAoQL54j0Y_Cbg7R5tRe9FXLKaBmcKbY_iyEpnMqQGDjx_335QJ/embed?start=false&loop=false&delayms=3000&slide=id.p" target="_blank">presentation overview</a>, and <a href="https://github.com/colyseus/colyseus#usage-examples" target="_blank">more examples</a>)
         </p>
-        <p>TODO: record an introductory video.</p>
+
+        <div class="tns-nav">
+          <button class="left">&laquo;</a>
+          <button class="right">&raquo;</a>
+        </div>
+
+        <div class="code-blocks">
+<pre><code class="language-typescript">// index.ts (server-side, entrypoint)
+import http from "http";
+import { Server, Room } from "colyseus";
+import { MyRoom } from "./rooms/MyRoom.ts";
+
+// create your game server
+const gameServer = new Server({
+  server: http.createServer()
+});
+
+// register your room handlers
+gameServer.define('my_room', MyRoom);
+
+// make it available to receive connections
+gameServer.listen(2567);
+console.log(`Listening on ws://localhost:2567`)
+</code></pre>
+
+<pre><code class="language-typescript">// rooms/MyRoom.ts (server-side, room file)
+import { Room } from "colyseus";
+
+class MyRoom extends Room {
+  maxClients = 4; // number of clients
+
+  // (room has been created) implement your own logic
+  async onCreate(options) { }
+
+  // (new client joined) implement your own logic
+  async onJoin(client, options) { }
+
+  // (client left) implement your own logic
+  async onLeave(client, consented) { }
+
+  // (room has been disposed) implement your own logic
+  async onDispose() { }
+}
+</code></pre>
+
+<pre><code class="language-typescript">// connection.ts (client-side)
+import { Client } from "colyseus.js";
+const client = new Client("ws://localhost:2567");
+
+async function connect () {
+  try {
+    const room = client.joinOrCreate("my_room");
+
+    room.onStateChange((newState) => {
+      console.log("New state:", newState);
+    });
+
+    room.onLeave((code) => {
+      console.log("You've been disconnected.");
+    });
+
+  } catch (e) {
+    console.error("Couldn't connect:", e);
+  }
+}
+</code></pre>
+
+</div>
+
       </section>
 
       <!-- <section id="features">
@@ -311,7 +402,7 @@
           </p>
         </div>
 
-        <div class="showcase-nav">
+        <div class="tns-nav">
           <button class="left">&laquo;</a>
           <button class="right">&raquo;</a>
         </div>
