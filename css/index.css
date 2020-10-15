@@ -628,8 +628,8 @@ section#showcase {
   border-radius: 50%;
 }
 
-.tns-nav > button:disabled { opacity: 0.5; outline: none; }
-.tns-nav > button:hover { background-color: rgba(0, 0, 0, 1); }
+.tns-nav > button:disabled { opacity: 0.5; outline: none; cursor: inherit; }
+.tns-nav > button:not(:disabled):hover { background-color: rgba(0, 0, 0, 1); }
 
 .tns-nav .left {
   left: 1vw;
