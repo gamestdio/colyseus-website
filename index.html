@@ -299,18 +299,20 @@ console.log(`Listening on ws://localhost:2567`)
 import { Room } from "colyseus";
 
 class MyRoom extends Room {
-  maxClients = 4; // number of clients
+  // number of clients per room
+  // (colyseus will create the room instances for you)
+  maxClients = 4;
 
-  // (room has been created) implement your own logic
+  // room has been created: bring your own logic
   async onCreate(options) { }
 
-  // (new client joined) implement your own logic
+  // client joined: bring your own logic
   async onJoin(client, options) { }
 
-  // (client left) implement your own logic
+  // client left: bring your own logic
   async onLeave(client, consented) { }
 
-  // (room has been disposed) implement your own logic
+  // room has been disposed: bring your own logic
   async onDispose() { }
 }
 </code></pre>
