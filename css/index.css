@@ -45,7 +45,7 @@ img { border: none; }
 
 h1 { font-size: 2.5em; }
 
-h1, h2, h3, h4, strong {
+h1, h2, h3, h4 {
   font-weight: 200;
   line-height: 1em;
 
@@ -413,9 +413,8 @@ footer {
   font-size: 0.8em;
 }
 
-footer p {
-  text-align: center;
-}
+footer strong { text-transform: uppercase; }
+footer p { text-align: center; }
 
 footer ul {
   vertical-align: top;
