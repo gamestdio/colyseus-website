@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Colyseus - Multiplayer Framework for Node.js</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="Create Multiplayer Games in JavaScript using Colyseus.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"> -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet' type='text/css'>
+
+        <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Colyseus"/>
+        <meta property="og:url" content="https://colyseus.io"/>
+        <meta property="og:title" content="Colyseus - Multiplayer Framework for Node.js"/>
+        <meta property="og:image" content="https://colyseus.io/images/fb-share.png"/>
+
+        <link rel="stylesheet" href="/css/index.css">
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-67917511-5', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="logos-and-trademark">
+
+      <nav class="visible">
+        <a href="/"><img class="logo" src="/images/logos/logo-white.png" alt="Colyseus"></a>
+        <ul>
+          <li><a href="/#features">Features</a> ·</li>
+          <li><a href="/#showcase">Showcase</a> ·</li>
+          <li><a href="/#community">Community</a> ·</li>
+          <li><a href="https://docs.colyseus.io" target="_blank">Documentation</a> ·</li>
+          <li><a href="https://docs.colyseus.io/faq/">FAQ</a> ·</li>
+          <li>
+            <a href="https://github.com/colyseus/colyseus" target="_blank">
+              GitHub
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="header">
+        <h1>Colyseus</h1>
+        <h2>Logo & Trademark</h2>
+        <p>Here are the raw logo images you can use for marketing or to show support.</p>
+      </section>
+
+      <section class="contrast">
+        <div class="inner">
+          <h1>White logos</h1>
+
+          <a href="/images/logos/logo-white-vertical.png"><img src="/images/logos/logo-white-vertical.png" alt="Colyseus Vertical White Logo" /></a>
+          <a href="/images/logos/logo-white.png"><img src="/images/logos/logo-white.png" alt="Colyseus White Logo" /></a>
+          <a href="/images/logos/colyseus-white-raw.png"><img src="/images/logos/colyseus-white-raw.png" alt="Colyseus White Logo" /></a>
+        </div>
+      </section>
+
+      <section>
+        <h1>Black logos</h1>
+
+        <a href="/images/logos/logo-black-vertical.png"><img src="/images/logos/logo-black-vertical.png" alt="Colyseus Vertical Black Logo" /></a>
+        <a href="/images/logos/logo-black.png"><img src="/images/logos/logo-black.png" alt="Colyseus Black Logo" /></a>
+        <a href="/images/logos/colyseus-black-raw.png"><img src="/images/logos/colyseus-black-raw.png" alt="Colyseus Black Logo" /></a>
+      </section>
+
+
+      <footer class="high-contrast">
+        <div class="inner">
+          <ul>
+            <li><strong>Navigation</strong></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="https://docs.colyseus.io/">Documentation</a></li>
+            <li><a href="https://github.com/colyseus/colyseus-examples">Examples</a></li>
+            <li><a href="https://github.com/colyseus/colyseus">GitHub</a></li>
+          </ul>
+          <ul>
+            <li><strong>News</strong></li>
+            <li><a href="http://twitter.com/colyseus" target="_blank">Follow on Twitter</a></li>
+            <li><a href="http://eepurl.com/dmfn7r" target="_blank">Newsletter</a></li>
+            <li><a href="https://github.com/colyseus/colyseus/releases" target="_blank">Release Announcements</a></li>
+          </ul>
+          <ul>
+            <li><strong>Legal</strong></li>
+            <li><a href="https://github.com/colyseus/colyseus/blob/master/LICENSE">MIT License</a></li>
+            <li><a href="/logo-and-trademark.html">Logo & Trademark</a></li>
+          </ul>
+          <p>Copyright © 2020 <a href="https://github.com/endel">Endel Dreyer</a></p>
+        </div>
+      </footer>
+
+    </body>
+</html>
